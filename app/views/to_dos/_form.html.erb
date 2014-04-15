@@ -1,0 +1,30 @@
+<%= form_for @to_do, :class => "form-horizontal", :role => "form" do |f| %>
+  <% if @to_do.errors.any? %>
+    <div  class="row" id="error_explanation">
+      <h2><%= pluralize(@to_do.errors.count, "error") %> prohibited this to_do from being saved:</h2>
+
+      <ul>
+      <% @to_do.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title, :class => "col-xs-3" %>
+    <%= f.text_field :title, :class => "col-xs-9" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, :class => "col-xs-3" %>
+    <%= f.text_area :description, :class => "col-xs-9" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :done, :class => "col-xs-3" %>
+    <%= f.check_box :done %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Save", {class: "btn btn-primary"} %>
+    <%= link_to 'Back', to_dos_path, {class: "btn btn-default"} %>
+  </div>
+<% end %>
