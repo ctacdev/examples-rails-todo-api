@@ -1,6 +1,6 @@
 # Base Rails API App
 
-# This is a basic rails app exposing an API and a CRUD interface. Use it to test front ends that need something basic to test CRUD against.
+This is a basic rails app exposing an API and a CRUD interface. Use it to test front ends that need something basic to test CRUD against.
 
 # Getting Started
 
